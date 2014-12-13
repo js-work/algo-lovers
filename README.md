@@ -2,7 +2,7 @@
 
 A collection of algorithms written in Javascript.
 
-## Algorithm Collections
+## Algorithms Collections
 ### Sort
  - Selection Sort
  - Quick Sort
@@ -14,6 +14,10 @@ A collection of algorithms written in Javascript.
 ### Control Flow
  - ForEach Parallel
 
+### Machine Learning
+ - Perceptron (coming soon)
+
 ## Roadmap
  - Fundamental Algorithms
+ - Control Flow Algorithms
  - Basic Machine Leraning Algorithms
