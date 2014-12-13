@@ -11,6 +11,9 @@ A collection of algorithms written in Javascript.
 ### Search
  - Binary Search
 
+### Async
+ - ForEach
+
 ## Roadmap
  - Fundamental Algorithms
  - Basic Machine Leraning Algorithms

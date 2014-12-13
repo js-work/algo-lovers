@@ -10,7 +10,14 @@ exports.selectionSort = SelectionSort;
 exports.quickSort = QuickSort;
 exports.bubbleSort = BubbleSort;
 
+
 // Search Algorithms
 var BinarySearch = require('./lib/search/BinarySearch');
 
 exports.binarySearch = BinarySearch;
+
+
+// Async Algorithms
+var ForEach = require('./lib/async/ForEach');
+
+exports.forEach = ForEach;
