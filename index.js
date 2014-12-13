@@ -6,18 +6,24 @@ var SelectionSort = require('./lib/sort/SelectionSort')
   , QuickSort = require('./lib/sort/QuickSort')
   , BubbleSort = require('./lib/sort/BubbleSort');
 
-exports.selectionSort = SelectionSort;
-exports.quickSort = QuickSort;
-exports.bubbleSort = BubbleSort;
+exports.Sort = {
+  selectionSort: SelectionSort,
+  quickSort: QuickSort,
+  bubbleSort: BubbleSort
+}
 
 
 // Search Algorithms
 var BinarySearch = require('./lib/search/BinarySearch');
 
-exports.binarySearch = BinarySearch;
+exports.Search = {
+  binarySearch: BinarySearch
+}
 
 
-// Async Algorithms
-var ForEach = require('./lib/async/ForEach');
+// Control Flow Algorithms
+var ForEachParallel = require('./lib/controlflow/ForEachParallel');
 
-exports.forEach = ForEach;
+exports.ControlFlow = {
+  forEachParallel: ForEachParallel
+}

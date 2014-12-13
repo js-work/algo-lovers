@@ -2,9 +2,9 @@ var chai = require('chai')
   , should = chai.should()
   , expect = chai.expect
   , assert = chai.assert
-  , ForEach = require("../lib/async/ForEach");
+  , ForEachParallel = require("../lib/controlflow/ForEachParallel");
 
-describe('ForEach', function() {
+describe('ForEachParallel', function() {
 
   var numbers;
   var count_errors = 0;
@@ -16,8 +16,8 @@ describe('ForEach', function() {
   });
 
   // Test
-  it('Should execute ForEach with no errors', function(done) {
-    ForEach(numbers, function(number, callback) {
+  it('Should execute ForEachParallel with no errors', function(done) {
+    ForEachParallel(numbers, function(number, callback) {
       // console.log("Printing " + number);
       callback(null); // no errors
       if(number==160 && count_errors==0) {
@@ -33,9 +33,9 @@ describe('ForEach', function() {
     });
   });
 
-  it('Should execute ForEach with an error when number equal to 3', function(done) {
+  it('Should execute ForEachParallel with an error when number equal to 3', function(done) {
     count_errors = 0;
-    ForEach(numbers, function(number, callback) {
+    ForEachParallel(numbers, function(number, callback) {
       if(number==3) { callback('Number == 3'); return; }
 
       callback(null); // no errors

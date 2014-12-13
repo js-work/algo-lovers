@@ -11,8 +11,8 @@ A collection of algorithms written in Javascript.
 ### Search
  - Binary Search
 
-### Async
- - ForEach
+### Control Flow
+ - ForEach Parallel
 
 ## Roadmap
  - Fundamental Algorithms
