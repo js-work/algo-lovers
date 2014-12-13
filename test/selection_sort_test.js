@@ -2,16 +2,16 @@ var chai = require('chai')
   , should = chai.should()
   , expect = chai.expect
   , assert = chai.assert
-  , QuickSort = require("../lib/sort/QuickSort");
+  , SelectionSort = require("../lib/sort/SelectionSort");
 
-describe('QuickSort', function() {
+describe('SelectionSort', function() {
 
   var sa  // expected array after the sort
     , lts // list to sort
     , isa // expected array after the sort
     , ilts; // list to sort
 
-  var tx, itx;
+  var tx, itx; // string arrays
 
   // Env set-up
   before(function(done) {
@@ -28,19 +28,19 @@ describe('QuickSort', function() {
 
   // Test
   it('Should sort list', function(done) {
-    QuickSort(lts); // sort lts array
+    SelectionSort(lts); // sort lts array
     assert.deepEqual(lts, sa);
     done();
   });
 
   it('Should sort inverted list', function(done) {
-    QuickSort(ilts); // sort ilts array
+    SelectionSort(ilts); // sort ilts array
     assert.deepEqual(ilts, isa);
     done();
   });
 
   it('Should sort string list', function(done) {
-    QuickSort(itx); // sort itx array
+    SelectionSort(itx); // sort itx array
     assert.deepEqual(tx, itx);
     done();
   });

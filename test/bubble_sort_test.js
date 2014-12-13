@@ -11,12 +11,17 @@ describe('BubbleSort', function() {
     , isa // expected array after the sort
     , ilts; // list to sort
 
+  var tx, itx; // string arrays
+
   // Env set-up
   before(function(done) {
     sa  = [1, 4, 5, 7, 9, 10];
     lts = [5, 1, 4, 10,7, 9];
     isa  = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     ilts = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+    tx = ["aaa", "bbb", "ccc", "ciao", "ddd", "ee", "jacopo"];
+    itx = ["jacopo", "ciao", "bbb", "ee", "ddd", "ccc", "aaa"];
     // Done!
     done();
   });
@@ -29,8 +34,14 @@ describe('BubbleSort', function() {
   });
 
   it('Should sort inverted list', function(done) {
-    BubbleSort(ilts); // sort lts array
+    BubbleSort(ilts); // sort ilts array
     assert.deepEqual(ilts, isa);
+    done();
+  });
+
+  it('Should sort string list', function(done) {
+    BubbleSort(itx); // sort itx array
+    assert.deepEqual(tx, itx);
     done();
   });
 
