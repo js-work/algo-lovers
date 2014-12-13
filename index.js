@@ -22,8 +22,10 @@ exports.Search = {
 
 
 // Control Flow Algorithms
-var ForEachParallel = require('./lib/controlflow/ForEachParallel');
+var ForEachParallel = require('./lib/controlflow/ForEachParallel')
+  , ForEachSeries = require('./lib/controlflow/ForEachSeries');
 
 exports.ControlFlow = {
-  forEachParallel: ForEachParallel
+  forEachParallel: ForEachParallel,
+  forEachSeries: ForEachSeries
 }
