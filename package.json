@@ -1,0 +1,29 @@
+{
+  "name": "algo-lovers",
+  "version": "0.0.1",
+  "description": "A collection of algorithms written in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm install",
+    "test": "mocha"
+  },
+  "dependencies": {
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JacopoDaeli/algo-lovers"
+  },
+  "keywords": [
+    "node",
+    "algorithms",
+    "mathematics"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1"
+  }
+}
