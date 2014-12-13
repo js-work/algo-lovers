@@ -2,9 +2,11 @@
 // Do you like algorithms?
 
 // Sort Algorithms
-var QuickSort = require('./lib/sort/QuickSort')
+var SelectionSort = require('./lib/sort/SelectionSort')
+  , QuickSort = require('./lib/sort/QuickSort')
   , BubbleSort = require('./lib/sort/BubbleSort');
 
+exports.selectionSort = SelectionSort;
 exports.quickSort = QuickSort;
 exports.bubbleSort = BubbleSort;
 
