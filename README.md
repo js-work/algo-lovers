@@ -16,6 +16,7 @@ A collection of algorithms written in Javascript.
  - ForEach Series
  - ForEach Limit
  - Series
+ - Parallel
 
 ### Machine Learning
  - Perceptron (coming soon)
