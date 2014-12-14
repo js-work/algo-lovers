@@ -26,10 +26,12 @@ describe('Series', function() {
 
   // Test
   it('Should execute a Series of tasks with no errors', function(done) {
-    Series(tasks, function(err, result) {
+    Series(tasks, function(err, results) {
       assert.equal(err, null);
-      assert.equal(typeof result, "string");
-      console.log(result);
+      assert.equal(typeof results, "object");
+      assert.equal(results[0], "one");
+      assert.equal(results[1], "two");
+      // console.log(results);
       if(tasks_completed==2) {
         done(); // Done!
       }
