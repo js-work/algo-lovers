@@ -31,7 +31,7 @@ describe('ForEachLimit', function() {
         }
       }, number*2);
     }, function(err) {
-      if(err) { count_errors++; return; }
+      assert.equal(err, null);
       // console.log("Completed");
     });
   });

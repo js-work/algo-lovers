@@ -14,6 +14,8 @@ A collection of algorithms written in Javascript.
 ### Control Flow
  - ForEach Parallel
  - ForEach Series
+ - ForEach Limit
+ - Series
 
 ### Machine Learning
  - Perceptron (coming soon)

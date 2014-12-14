@@ -31,8 +31,7 @@ describe('ForEachParallel', function() {
         }
       }, number*2);
     }, function(err) {
-      if(err) { count_errors++; return; }
-      // console.log("Completed");
+      assert.equal(err, null);
     });
   });
 
