@@ -25,11 +25,16 @@ exports.Search = {
 var ForEachParallel = require('./lib/controlflow/ForEachParallel')
   , ForEachSeries = require('./lib/controlflow/ForEachSeries')
   , ForEachLimit = require('./lib/controlflow/ForEachLimit')
-  , Series = require('./lib/controlflow/Series');
+  , Series = require('./lib/controlflow/Series')
+  , Parallel = require('./lib/controlflow/Parallel')
+  , Logic = require('./lib/controlflow/Logic');
 
 exports.ControlFlow = {
   forEachParallel: ForEachParallel,
   forEachSeries: ForEachSeries
   forEachLimit: ForEachLimit
-  series: Series
+  series: Series,
+  parallel: Parallel,
+  logic: Logic,
+  auto: Logic
 }

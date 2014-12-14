@@ -17,6 +17,7 @@ A collection of algorithms written in Javascript.
  - ForEach Limit
  - Series
  - Parallel
+ - Logic [ Equal to async.auto() ]
 
 ### Machine Learning
  - Perceptron (coming soon)
