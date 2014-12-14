@@ -6,12 +6,16 @@ var chai = require('chai')
 
 describe('ForEachParallel', function() {
 
-  var numbers;
-  var count_errors = 0;
+  var numbers
+  , total = 0
+  , partial = 0;
 
   // Env set-up
   before(function(done) {
-    numbers = [1, 2, 3, 4, 40, 80, 160];
+    numbers = [320,160, 80, 40, 20, 4, 2, 1];
+    for(var i=0; i<numbers.length; i++) {
+      total += numbers[i];
+    }
     done();
   });
 
@@ -19,36 +23,16 @@ describe('ForEachParallel', function() {
   it('Should execute ForEachParallel with no errors', function(done) {
     ForEachParallel(numbers, function(number, callback) {
       // console.log("Printing " + number);
-      callback(null); // no errors
-      if(number==160 && count_errors==0) {
-        done();
-      }
+      setTimeout(function() {
+        callback(null); // no errors
+        partial += number;
+        if(partial==total) {
+          done();
+        }
+      }, number*2);
     }, function(err) {
-      if(err) {
-        count_errors++;
-        // console.log('Failed to process');
-      } else {
-        // console.log('Process completed');
-      }
-    });
-  });
-
-  it('Should execute ForEachParallel with an error when number equal to 3', function(done) {
-    count_errors = 0;
-    ForEachParallel(numbers, function(number, callback) {
-      if(number==3) { callback('Number == 3'); return; }
-
-      callback(null); // no errors
-      if(number==160 && count_errors==1) {
-        done();
-      }
-    }, function(err) {
-      if(err) {
-        count_errors++;
-        // console.log('Failed to process');
-      } else {
-        // console.log('Process completed');
-      }
+      if(err) { count_errors++; return; }
+      // console.log("Completed");
     });
   });
 

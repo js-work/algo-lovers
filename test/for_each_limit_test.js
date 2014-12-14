@@ -2,13 +2,13 @@ var chai = require('chai')
   , should = chai.should()
   , expect = chai.expect
   , assert = chai.assert
-  , ForEachSeries = require("../lib/controlflow/ForEachSeries");
+  , ForEachLimit = require("../lib/controlflow/ForEachLimit");
 
-describe('ForEachSeries', function() {
+describe('ForEachLimit', function() {
 
   var numbers
-  , total = 0
-  , partial = 0;
+    , total = 0
+    , partial = 0;
 
   // Env set-up
   before(function(done) {
@@ -20,8 +20,8 @@ describe('ForEachSeries', function() {
   });
 
   // Test
-  it('Should execute ForEachSeries with no errors', function(done) {
-    ForEachSeries(numbers, function(number, callback) {
+  it('Should execute ForEachLimit with no errors', function(done) {
+    ForEachLimit(numbers, 3, function(number, callback) {
       // console.log("Printing " + number);
       setTimeout(function() {
         callback(null); // no errors
