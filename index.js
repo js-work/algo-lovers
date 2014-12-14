@@ -24,10 +24,12 @@ exports.Search = {
 // Control Flow Algorithms
 var ForEachParallel = require('./lib/controlflow/ForEachParallel')
   , ForEachSeries = require('./lib/controlflow/ForEachSeries')
-  , ForEachLimit = require('./lib/controlflow/ForEachLimit');
+  , ForEachLimit = require('./lib/controlflow/ForEachLimit')
+  , Series = require('./lib/controlflow/Series');
 
 exports.ControlFlow = {
   forEachParallel: ForEachParallel,
   forEachSeries: ForEachSeries
   forEachLimit: ForEachLimit
+  series: Series
 }
