@@ -32,7 +32,7 @@ describe('Series', function() {
       assert.equal(results[0], "one");
       assert.equal(results[1], "two");
       // console.log(results);
-      if(tasks_completed==2) {
+      if(tasks_completed===2) {
         done(); // Done!
       }
     });

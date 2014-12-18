@@ -26,7 +26,7 @@ describe('ForEachParallel', function() {
       setTimeout(function() {
         callback(null); // no errors
         partial += number;
-        if(partial==total) {
+        if(partial===total) {
           done();
         }
       }, number*2);
