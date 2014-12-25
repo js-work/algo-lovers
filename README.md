@@ -19,10 +19,6 @@ A collection of algorithms written in Javascript.
  - Parallel
  - Logic [ Equal to async.auto() ]
 
-### Machine Learning
- - Perceptron (coming soon)
-
 ## Roadmap
  - Fundamental Algorithms
  - Control Flow Algorithms
- - Basic Machine Leraning Algorithms
