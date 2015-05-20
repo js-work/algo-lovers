@@ -1,5 +1,3 @@
-## Introduction
-
 A collection of algorithms written in Javascript.
 
 ## Algorithms Collections
