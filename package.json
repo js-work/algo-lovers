@@ -1,6 +1,6 @@
 {
   "name": "algo-lovers",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A collection of algorithms written in Javascript.",
   "main": "index.js",
   "scripts": {
